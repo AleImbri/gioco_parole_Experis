@@ -6,7 +6,8 @@ file = open("Lista parole.txt", "r") # Apertura in modalità lettura
 righe = file.readlines() # Legge una singola riga del file
 for parola in righe:
     lista.append(parola)
-parola_incognita= 'cavallo' #random.choice(lista)
+parola_incognita = random.choice(lista)
+parola_incognita = parola_incognita[:-1] # bisogna togliere l'ultimo carattere dalla parola incognita se si sceglie dalla lista nel file
 
 
 # scelgo il livello di difficoltà
@@ -44,8 +45,8 @@ while tentativi > 0:
     else:
         tentativi -= 1
         print(f"Lettera non presente! Ti rimangono {tentativi} tentativi")
-        
+
 if tentativi == 0:
-    print("Sei morto impiccato!")
+    print(f"Sei morto impiccato! La parola era: {parola_incognita}")
 else:
     print("Hai vinto!")
