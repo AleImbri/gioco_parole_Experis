@@ -25,7 +25,7 @@ print("Hai " + str(tentativi_iniziali) + " tentativi")
 
 
 # stampa gli underscore in base alle lettere della parola
-print("PAROLA DA INDOVINARE: " + str(list("_"*len(parola_incognita))))
+print("PAROLA DA INDOVINARE: " + str(''.join(list("_"*len(parola_incognita)))))
 tentativi = tentativi_iniziali
 parola_aggiornata = list("_"*len(parola_incognita))
 lettere_indovinate = []
@@ -39,7 +39,7 @@ while tentativi > 0:
                 parola_aggiornata[indice] = "_"
             else:
                 parola_aggiornata[indice] = parola_incognita[indice]
-        print(f"PAROLA DA INDOVINARE: {parola_aggiornata}")
+        print(f"PAROLA DA INDOVINARE: {''.join(parola_aggiornata)}")
         if parola_aggiornata == list(parola_incognita):
             break
     else:
@@ -47,6 +47,6 @@ while tentativi > 0:
         print(f"Lettera non presente! Ti rimangono {tentativi} tentativi")
 
 if tentativi == 0:
-    print(f"Sei morto impiccato! La parola era: {parola_incognita}")
+    print(f"Sei morto impiccato! La parola era: {''.join(parola_incognita)}")
 else:
     print("Hai vinto!")
