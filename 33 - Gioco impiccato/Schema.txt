@@ -1,0 +1,9 @@
+Lista parole con estrazione random
+Scegli livello di difficoltà con un input
+Stampa di tanti _ quante le lettere della parola
+Chiedere una lettera in input (stampare errore se l'inserimento non ha senso)
+Verificare se la lettera è presente
+Aggiornare e mostrare il numero di tentativi
+Chiedere nuova lettera in input
+
+Se si indovina la parola, stampare "Sei salvo!", altrimenti "Sei stato impiccato!"
