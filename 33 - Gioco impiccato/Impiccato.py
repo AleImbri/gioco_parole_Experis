@@ -11,10 +11,10 @@ parola_incognita = parola_incognita[:-1] # bisogna togliere l'ultimo carattere d
 
 
 # scelgo il livello di difficoltà
-livello = input("Scegli il livello: \n1:facile\n2:intermedio\n3:difficile\n ")
+livello = input("Scegli il livello: \n1:facile\n2:intermedio\n3:difficile\n")
 while livello != str(1) and livello != str(2) and livello != str(3):
     print("SCELTA NON VALIDA: RIPROVA")
-    livello = input("Scegli il livello: \n1:facile\n2:intermedio\n3:difficile\n ")
+    livello = input("Scegli il livello: \n1:facile\n2:intermedio\n3:difficile\n")
 if livello == str(1):
     tentativi_iniziali = 10
 elif livello == str(2):
