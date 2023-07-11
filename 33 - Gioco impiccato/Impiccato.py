@@ -13,18 +13,18 @@ parola_incognita = parola_incognita[:-1] # bisogna togliere l'ultimo carattere d
 # scelgo il livello di difficoltà
 livello = input("Scegli il livello: \n1:facile\n2:intermedio\n3:difficile\n ")
 while livello != str(1) and livello != str(2) and livello != str(3):
-    print("SCELTA NON VALIDA:RIPROVA")
+    print("SCELTA NON VALIDA: RIPROVA")
     livello = input("Scegli il livello: \n1:facile\n2:intermedio\n3:difficile\n ")
 if livello == str(1):
-    tentativi_iniziali=10
+    tentativi_iniziali = 10
 elif livello == str(2):
-    tentativi_iniziali=6
+    tentativi_iniziali = 6
 elif livello == str(3):
-    tentativi_iniziali=3
+    tentativi_iniziali = 3
 print("Hai " + str(tentativi_iniziali) + " tentativi")
 
 
-# stampa gli underscore in base alle lettere della parola
+# gioco vero e proprio
 print("PAROLA DA INDOVINARE: " + str(''.join(list("_"*len(parola_incognita)))))
 tentativi = tentativi_iniziali
 parola_aggiornata = list("_"*len(parola_incognita))
@@ -46,6 +46,8 @@ while tentativi > 0:
         tentativi -= 1
         print(f"Lettera non presente! Ti rimangono {tentativi} tentativi")
 
+
+# stampa esito del gioco
 if tentativi == 0:
     print(f"Sei morto impiccato! La parola era: {''.join(parola_incognita)}")
 else:
